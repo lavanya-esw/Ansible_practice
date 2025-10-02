@@ -2,6 +2,7 @@
 - name: "looping the names"
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: "print names through loop"
     debug:
@@ -12,8 +13,8 @@
       - krishna
   - name: "install packages based on state"
     package:
-      name: "{{ item.name }}"
-      state: "{{ item.state }}"
+      name: "{{item.name}}"
+      state: "{{item.state}}"
     loop:
-      - { name: "nginx", state: "latest" }
-      - { name: "zip", state: "latest" }
+      - {name: "nginx", state: "latest"}
+      - {name: "zip", state: "latest"}
