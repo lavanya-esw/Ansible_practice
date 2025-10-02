@@ -1,0 +1,12 @@
+---
+- name: "when condition"
+  hosts: local
+  connection: local
+  vars:
+    number: 5
+  tasks:
+  - name: "condition check"
+    debug:
+      msg: "given number {{number}} is less than 10"
+    when: number < 10
+  
