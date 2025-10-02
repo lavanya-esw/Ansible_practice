@@ -3,12 +3,12 @@
   hosts: localhost
   connection: local
   vars_prompt: 
-  - name: "USERNAME"
-    prompt: "Enter the name:"
-    private: false
-  - name: "PWD"
-    prompt: "password plaese..."
-    private: true
+    - name: "USERNAME"
+      prompt: "Enter the name:"
+      private: false
+    - name: "PWD"
+      prompt: "password plaese..."
+      private: true
   tasks:
   - name: "display username and password"
   ansible.builtin.debug:
