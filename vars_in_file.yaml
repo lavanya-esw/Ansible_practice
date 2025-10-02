@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   vars_files:
-    - varable.yaml
+    -variable.yaml
   tasks: 
   - name: "calling variables from file"
     ansible.builtin.debug:
