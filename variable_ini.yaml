@@ -4,5 +4,5 @@
   connection: local
   tasks:
   - name: "inventory variables"
-    debug:
+    ansible.builtin.debug:
       msg: "{{name}} {{type}}"
