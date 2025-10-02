@@ -1,5 +1,5 @@
 ---
-- name: "variables practice "
+- name: "tasks variables practice "
   hosts: localhost
   connection: local
   # play_level
