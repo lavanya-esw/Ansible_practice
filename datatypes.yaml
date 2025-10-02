@@ -4,7 +4,10 @@
   connection: local
   vars:
     NAME: "DevOps"
-    tools: ["git", "ansible", "jenkins"]
+    tools: 
+      - git
+      - ansible
+      - jenkins
     concepts:
       cloud: aws
       CM: ansible
