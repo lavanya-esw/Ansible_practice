@@ -1,0 +1,14 @@
+---
+- name: "datatypes"
+  hosts: local
+  connection: local
+  vars:
+    NAME: "DevOps"
+    tools: ["git", "ansible", "jenkins"]
+    concepts:
+      cloud: aws
+      CM: ansible
+  tasks:
+  - name: "Devops practice"
+    debug:
+      msg: "{{NAME}}, {{tools}}, {{concepts}}"
