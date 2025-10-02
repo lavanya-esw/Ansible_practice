@@ -2,13 +2,17 @@
 - name: "variables practice "
   hosts: localhost
   connection: local
+  # play_level
+  # vars:
+  #   NAME: "ANSIBLE"
+  #   TYPE: "PRACTICE"
+  tasks:
   vars:
     NAME: "ANSIBLE"
     TYPE: "PRACTICE"
-  tasks:
   - name: "calling variables"
     ansible.builtin.debug:
-      msg: "play-level varibales"
+      msg: "varibales"
   - name: "calling variables in list2"
     ansible.builtin.debug:
       msg: "{{ NAME }} {{ TYPE }}"
