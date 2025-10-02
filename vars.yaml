@@ -1,0 +1,14 @@
+---
+- name: "variables practice "
+  hosts: localhost
+  connection: local
+  vars:
+    NAME: "ANSIBLE"
+    TYPE: "PRACTICE"
+  tasks:
+  - name: "calling variables"
+    amsible.builtin.debug:
+      msg: "play-level varibales"
+  - name:
+    ansible.builtin.debug:
+      msg: "{{ NAME }} {{ PRACTICE }}"
