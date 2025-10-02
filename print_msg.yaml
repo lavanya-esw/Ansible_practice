@@ -6,4 +6,4 @@
     - name: "Message"
       debug:
         msg: "this is my first ansible playbook"
-        msg: "second"
+        # msg: "second"
