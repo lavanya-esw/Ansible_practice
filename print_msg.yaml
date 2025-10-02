@@ -1,7 +1,7 @@
 ---
 - name: "print some message"
   hosts: localhost
-  connections: local
+  connection: local
   tasks: 
     - name: "Message"
       ansible.builtin.debug:
