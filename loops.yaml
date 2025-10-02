@@ -10,3 +10,10 @@
       - hanuman
       - ram
       - krishna
+  - name: "install packages based on state"
+    package:
+      name: item.name
+      state: item.state
+    loop:
+     - {name:"nginx", state:"latest"}
+     - {name:"zip", state:"latest"}
