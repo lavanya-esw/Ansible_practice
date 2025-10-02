@@ -1,0 +1,12 @@
+---
+- name: "looping the names"
+  hosts: local
+  connection: local
+  tasks:
+  - name: "print names through loop"
+    debug:
+      msg: "{{item}}"
+    loop:
+      -hanuman
+      -ram
+      -krishna

@@ -7,6 +7,6 @@
   tasks:
   - name: "condition check"
     debug:
-      msg: "given number {{number}} is less than 100"
-    when: number <= 100
+      msg: "given number {{number}} is less than equal 100"
+    when: number <= 100 
   
