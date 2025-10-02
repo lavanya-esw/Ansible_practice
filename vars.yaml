@@ -7,7 +7,7 @@
     TYPE: "PRACTICE"
   tasks:
   - name: "calling variables"
-    amsible.builtin.debug:
+    ansible.builtin.debug:
       msg: "play-level varibales"
   - name:
     ansible.builtin.debug:
