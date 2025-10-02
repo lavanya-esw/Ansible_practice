@@ -5,11 +5,10 @@
   tasks:
   - name: "promt"
     vars_prompt: 
-      name: "USERNAME"
+    - name: "USERNAME"
       prompt: "Enter the name:"
       private: false
-    vars_prompt:
-      name: "PWD"
+    - name: "PWD"
       prompt: "password plaese..."
       private: true
     ansible.builtin.debug:
