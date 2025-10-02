@@ -4,5 +4,5 @@
   connection: local
   tasks: 
     - name: "Message"
-      ansible.builtin.debug:
+      debug:
         msg: "this is my first ansible playbook"
