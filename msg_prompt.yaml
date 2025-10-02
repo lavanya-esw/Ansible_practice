@@ -11,5 +11,5 @@
       private: true
   tasks:
   - name: "display username and password"
-  ansible.builtin.debug:
-    msg: "username is {{USERNAME}}, password is {{PWD}}"
+    ansible.builtin.debug:
+      msg: "username is {{USERNAME}}, password is {{PWD}}"
