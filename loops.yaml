@@ -7,6 +7,6 @@
     debug:
       msg: "{{item}}"
     loop:
-      -hanuman
-      -ram
-      -krishna
+      - hanuman
+      - ram
+      - krishna
