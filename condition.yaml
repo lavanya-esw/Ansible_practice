@@ -3,7 +3,7 @@
   hosts: local
   connection: local
   vars:
-    number: 5
+    number: 100
   tasks:
   - name: "condition check"
     debug:
