@@ -25,5 +25,5 @@
       enabled: yes
     loop:
       - {name: "nginx", state: "started"}
-      - {name: "zip", state: "started"}
+      #- {name: "zip", state: "started"}
 
