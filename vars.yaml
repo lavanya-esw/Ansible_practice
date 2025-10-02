@@ -11,4 +11,4 @@
       msg: "play-level varibales"
   - name: "calling variables in list2"
     ansible.builtin.debug:
-      msg: "{{ NAME }}, {{ TYPE }}"
+      msg: "{{ NAME }} {{ TYPE }}"
