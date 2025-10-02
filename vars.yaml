@@ -7,12 +7,10 @@
   #   NAME: "ANSIBLE"
   #   TYPE: "PRACTICE"
   tasks:
-  vars:
-    NAME: "ANSIBLE"
-    TYPE: "PRACTICE"
-  - name: "calling variables"
+  - name: "task-level variablees"
+    vars:
+      NAME: "ANSIBLE"
+      TYPE: "PRACTICE"
     ansible.builtin.debug:
-      msg: "varibales"
-  - name: "calling variables in list2"
-    ansible.builtin.debug:
-      msg: "{{ NAME }} {{ TYPE }}"
+      msg: "{{NAME}} {{TYPE}}"
+  
