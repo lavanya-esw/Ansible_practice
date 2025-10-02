@@ -9,6 +9,6 @@
   - name: "calling variables"
     ansible.builtin.debug:
       msg: "play-level varibales"
-  - name:
+  - name: "calling variables in list2"
     ansible.builtin.debug:
       msg: "{{ NAME }} {{ PRACTICE }}"
