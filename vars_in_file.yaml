@@ -1,0 +1,10 @@
+---
+- name: "assign variables in file"
+  hosts: localhost
+  connection: local
+  vars_files:
+    -varable.yaml
+  tasks: 
+  - name: "calling variables from file"
+    ansible.builtin.debug:
+      msg: "{{name}} {{type}}"

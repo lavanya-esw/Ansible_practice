@@ -8,9 +8,10 @@
   #   TYPE: "PRACTICE"
   tasks:
   - name: "task-level variablees"
-    vars:
-      NAME: "ANSIBLE"
-      TYPE: "PRACTICE"
+  # task_level
+    # vars:
+    #   NAME: "ANSIBLE"
+    #   TYPE: "PRACTICE"
     ansible.builtin.debug:
       msg: "{{NAME}} {{TYPE}}"
   
