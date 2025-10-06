@@ -27,6 +27,6 @@
         - key: Environment
           value: dev
     ansible.builtin.debug:
-      msg: "tags are {{ options | items2dict }}"
+      msg: "tags are {{options | items2dict}}"
 
 
