@@ -11,3 +11,10 @@
       Technologies: "DevOps,Java,Python,AWS"
     ansible.builtin.debug:
       msg: "{{ Technologies | split(',')}}"
+  - name: "dictionaries to list conversion"
+    vars:
+      vehicles:
+        two_wheeler: bus
+        four_wheeler: car
+    ansible.builtin.debug:
+      msg: types of vehicles are : "{{vehicles | dict2items}}""
