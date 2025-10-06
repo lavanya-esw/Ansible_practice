@@ -18,7 +18,7 @@
         four_wheeler: car
     ansible.builtin.debug:
       msg: "types of vehicles are : {{vehicles | dict2items}}"
-  - name:
+  - name: "list to dictionaries conversion" 
     vars:  
       vehicles:
         - type: two_wheeler
