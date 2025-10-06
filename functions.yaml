@@ -21,12 +21,12 @@
 
   - name: "list to dictionaries conversion" 
     vars:  
-      options:
+      tags:
         - key: Application
           value: payment
         - key: Environment
           value: dev
     ansible.builtin.debug:
-      msg: "tags are {{options | items2dict}}"
+      msg: "tags are {{tags | items2dict}}"
 
 
