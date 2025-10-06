@@ -18,6 +18,7 @@
         four_wheeler: car
     ansible.builtin.debug:
       msg: "types of vehicles are : {{vehicles | dict2items}}"
+
   - name: "list to dictionaries conversion" 
     vars:  
       tags:
@@ -26,6 +27,6 @@
         - key: Environment
           value: dev
     ansible.builtin.debug:
-      msg: " four wheerlers are : {{tags | items2dict}}"
+      msg: " tags are {{tags | items2dict}}"
 
 
