@@ -40,5 +40,15 @@
     ansible.builtin.copy:
       dest: "./converted.json"
       content: "{{ file | to_nice_json}}"
+  - name: "upper case conversion"
+    vars:
+      name: hanuman
+    ansible.builtin.debug:
+      msg: "{{ name | upper}}"
+  - name: "lower case conversion"
+    vars:
+      name: HANUMAN
+    ansible.builtin.debug:
+      msg: "{{name | lower}}"
 
 
