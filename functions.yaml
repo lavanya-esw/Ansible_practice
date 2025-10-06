@@ -28,5 +28,12 @@
           value: dev
     ansible.builtin.debug:
       msg: "tags are {{options | items2dict}}"
+  
+  - name: "read yaml and take into file"
+    ansible.builtin.set_fact:
+      file: "{{lookup('file', './vars.yaml') | from_yaml}}"
+  - name: "yaml to json conversion"
+    ansible.builtin.debug:
+     msg: "{{ file | to_json}}"
 
 
