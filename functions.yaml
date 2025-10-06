@@ -20,10 +20,12 @@
       msg: "types of vehicles are : {{vehicles | dict2items}}"
   - name: "list to dictionaries conversion" 
     vars:  
-      vehicles:
-        - type: two_wheeler
-          name: bike
-        - type: four_wheeler
-          name: truck
+      tags:
+        - key: Application
+          value: payment
+        - key: Environment
+          value: dev
     ansible.builtin.debug:
-      msg: " four wheerlers are : {{vehicles | items2dict}}"
+      msg: " four wheerlers are : {{tags | items2dict}}"
+
+
