@@ -21,7 +21,9 @@
   - name:
     vars:  
       vehicles:
-        - two_wheeler: bike
-        - four_wheeler: truck        
+        - type: two_wheeler
+          name: bike
+        - type: four_wheeler
+          name: truck
     ansible.builtin.debug:
       msg: " four wheerlers are : {{vehicles | items2dict}}"
