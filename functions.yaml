@@ -39,6 +39,6 @@
   - name: "copy the converted json file"
     ansible.builtin.copy:
       dest: "./converted.json"
-      content: "{{ file | to_json}}"
+      content: "{{ file | to_nice_json}}"
 
 
