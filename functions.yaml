@@ -6,3 +6,8 @@
   - name: "default variables"
     ansible.builtin.debug:
       msg: "{{name | default('HANUMAN')}}"
+  - name: "strings to lists conversion"
+    vars:
+      Technologies: "DevOps,Java,Python,AWS"
+    ansible.builtin.debug:
+      msg: "{{ Technologies | split(',')}}"
