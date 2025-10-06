@@ -18,3 +18,11 @@
         four_wheeler: car
     ansible.builtin.debug:
       msg: "types of vehicles are : {{vehicles | dict2items}}"
+  - name:
+    vars:
+      four_wheeler:
+        - car
+        - jeep
+        - truck
+    ansible.builtin.debug:
+      msg: "{{four_wheeler | items2dict}}"
