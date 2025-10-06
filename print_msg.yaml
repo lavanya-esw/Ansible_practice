@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   tasks: 
-    - name: "Message"
-      debug:
-        msg: "this is my first ansible playbook"
+  - name: "Message"
+    debug:
+      msg: "this is my first ansible playbook"
         # msg: "second"

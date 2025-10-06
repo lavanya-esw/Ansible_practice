@@ -1,0 +1,8 @@
+---
+- name: "practicing filters with examples"
+  hosts: local
+  connection: local
+  tasks:
+  - name: "default variables"
+    ansible.builtin.debug:
+      msg: "{{name | default('HANUMAN')}}"
