@@ -24,4 +24,4 @@
         - two_wheeler: bike
         - four_wheeler: truck        
     ansible.builtin.debug:
-      msg: " four wheerlers are : {{four_wheeler | items2dict}}"
+      msg: " four wheerlers are : {{vehicles | items2dict}}"
