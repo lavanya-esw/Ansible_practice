@@ -36,4 +36,9 @@
     ansible.builtin.debug:
      msg: "{{ file | to_json}}"
 
+  - name: "copy the converted json file"
+    ansible.builtin.copy:
+      dest: "./converted.json"
+      content: "{{ file | to_json}}"
+
 
