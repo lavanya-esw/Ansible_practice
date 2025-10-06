@@ -17,4 +17,4 @@
         two_wheeler: bus
         four_wheeler: car
     ansible.builtin.debug:
-      msg: types of vehicles are : "{{vehicles | dict2items}}""
+      msg: "types of vehicles are : {{vehicles | dict2items}}"
