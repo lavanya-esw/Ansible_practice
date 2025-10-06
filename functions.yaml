@@ -25,4 +25,4 @@
         - jeep
         - truck
     ansible.builtin.debug:
-      msg: "{{four_wheeler | items2dict}}"
+      msg: " four wheerlers are : {{four_wheeler | items2dict}}"
