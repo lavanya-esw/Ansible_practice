@@ -12,7 +12,7 @@
   tasks:
   - name: create ec2-instance
     amazon.aws.ec2_instance:
-      name: "public-compute-instance"
+      name: "{{item}}"
       instance_type: t2.micro
       security_group: "{{sg_id}}"
       network_interfaces:
