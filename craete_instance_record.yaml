@@ -46,4 +46,4 @@
       value: "{{item.instances[0].private_ip_address}}"
       wait: true
       loop: "{{instance_output.results}}"
-    when: instance_output.results.item != "frontend"
+    when: instance_output.results[item] != "frontend"
