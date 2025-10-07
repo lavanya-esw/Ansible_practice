@@ -15,8 +15,7 @@
       name: "{{item}}"
       instance_type: t2.micro
       security_group: "{{sg_id}}"
-      network_interfaces:
-        - assign_public_ip: true
+      
       image_id: "{{ami_id}}"
       tags:
         Environment: "{{item}}"
