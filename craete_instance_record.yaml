@@ -60,6 +60,6 @@
       overwrite: true
       wait: true
     loop: "{{instance_output.results}}"
-    when: item.item = "frontend"
+    when: item.item == "frontend"
 
 
