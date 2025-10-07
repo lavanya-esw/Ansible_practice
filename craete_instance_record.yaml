@@ -1,0 +1,28 @@
+---
+- name: Create ec2-instance and route-53 records
+  hosts: local
+  connection: local
+  vars:
+    ami_id: "ami-09c813fb71547fc4f"
+    sg_id: "sg-0dfa2ec6d3272ffeb"
+    domain_name: "awsdevops.fun"
+    zone_id: "Z02792703IESGDED1SCJO"
+    instances:
+      - mongodb
+  tasks:
+  - name: create ec2-instance
+    amazon.aws.ec2_instance:
+      name: "public-compute-instance"
+      instance_type: t2.micro
+      security_group: "{{sg_id}}"
+      network_interfaces:
+        - assign_public_ip: true
+      image_id: "{{ami_id}}"
+      tags:
+        Environment: {{item}}
+    loop:"{{instances}}"
+    register: instance_output
+
+  - name: print the instance_output
+    ansible.builtin.debug:
+      msg: "{{instance_output}}"
