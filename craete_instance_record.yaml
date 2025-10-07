@@ -20,7 +20,7 @@
       image_id: "{{ami_id}}"
       tags:
         Environment: {{item}}
-    loop:"{{instances}}"
+    loop: "{{instances}}"
     register: instance_output
 
   - name: print the instance_output
