@@ -26,23 +26,24 @@
   #   ansible.builtin.debug:
   #     msg: "{{instance_output}}"
 
-  - name: print privtae_ip_address
-    debug:
-      msg: "{{item.instances[0].private_ip_address}}"
-    loop: "{{instance_output.results}}"
+  # - name: print privtae_ip_address
+  #   debug:
+  #     msg: "{{item.instances[0].private_ip_address}}"
+  #   loop: "{{instance_output.results}}"
 
-  - name: print public_ip_address
-    debug:
-      msg: "{{item.instances[0].public_ip_address}}"
-    loop: "{{instance_output.results}}"
+  # - name: print public_ip_address
+  #   debug:
+  #     msg: "{{item.instances[0].public_ip_address}}"
+  #   loop: "{{instance_output.results}}"
 
-  # - name: create and update route53 record
-  #   amazon.aws.route53:
-  #     state: present
-  #     zone: "{{zone_id}}"
-  #     record: "{{instances}}.{{domain_name}}"
-  #     type: A
-  #     ttl: 1
-  #     value: "{{item.instances[0].private_ip_address}}"
-  #     wait: true
-  #     loop: "{{instance_output.results}}"
+  - name: create and update route53 record
+    amazon.aws.route53:
+      state: present
+      zone: "{{zone_id}}"
+      record: "{{item}}.{{domain_name}}"
+      type: A
+      ttl: 1
+      value: "{{item.instances[0].private_ip_address}}"
+      wait: true
+      loop: "{{instance_output.results}}"
+    when: "{{item}} != frontend
