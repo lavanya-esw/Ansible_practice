@@ -45,5 +45,5 @@
       ttl: 1
       value: "{{item.instances[0].private_ip_address}}"
       wait: true
-    when: item.item != "frontend"
     loop: "{{instance_output.results}}"
+    when: item.item != "frontend"
